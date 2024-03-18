@@ -14,10 +14,10 @@ defmodule PDF2tex do
   defp execute_pdftotext(command, args) do
     case System.cmd(command, args) do
       {output, 0} ->
-        {:ok, output}
+        output
 
       {output, _} ->
-        {:error, output}
+        output
     end
   end
 end
